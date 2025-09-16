@@ -26,7 +26,10 @@ jobs:
       - name: Download text file
         uses: actions/download-artifact@v4
         with:
+          name: hello.txt
           path: ./artifacts
+      - name: ls 
+        run: ls -la
       - name: Cat text file
         run: cat ./artifacts/hello.txt
 
